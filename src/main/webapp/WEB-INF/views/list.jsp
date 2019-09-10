@@ -30,7 +30,10 @@
         <c:forEach items="${pageResult.list}" var="user">
             <tr>
                 <td>${user.id}</td>
-                <td><img src="${user.headImg}" width="100px"></td>
+                <td>
+                    <img src="${user.headImg}" width="100px">
+                    <a href="/download?imgPath=${user.headImg}">下载头像</a>
+                </td>
                 <td>${user.name}</td>
                 <td><fmt:formatDate value="${user.bornDate}" pattern="yyyy-MM-dd"/></td>
                 <td>
